@@ -27,12 +27,12 @@ function countCounter(countCount, count) {
   if (wordCountMap.hasOwnProperty(count)) {
     countCount += 1
   } else {
-    wordCountMap[countCount] = 1;
+    countCount = 1;
   }
   return wordCountMap[countCount] = countCount;
 }
 
-wordCounts.reduce(countCounter, 1);
+wordCounts.reduce(countCounter);
 
 console.log(wordCountMap);
 
