@@ -32,10 +32,7 @@ function countCounter(countCount, count) {
   return countCount;
 }
 
-var blah = wordCounts.reduce(countCounter);
-
-console.log(blah);
-
+const wordCountMap = monologueLines.reduce(countCounter, {});
 
 const totalBatteries = batteryBatches.reduce((totalBatteries, battery) => {
   return totalBatteries += battery;
