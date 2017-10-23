@@ -29,7 +29,7 @@ function countCounter(countCount, count) {
   } else {
     countCount = 1;
   }
-  return wordCountMap[countCount] = countCount;
+  return countCount;
 }
 
 wordCounts.reduce(countCounter);
