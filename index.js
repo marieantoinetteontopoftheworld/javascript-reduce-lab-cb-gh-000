@@ -17,19 +17,16 @@ const monologueLines = [
   'I am the one who knocks!'
 ];
 
-const wordCountMap = {};
+function countCounter(countCount, sentence) {
+  var wordCount = sentence.split(' ').length;
 
-wordCounts = monologueLines.map(word => {
-  return word.split(' ').length;
-});
-
-function countCounter(countCount, count) {
-  if (wordCountMap.hasOwnProperty(count)) {
-    countCount += 1
-  } else {
-    countCount = 1;
+  if (!map[wordCount]) {
+    map[wordCount] = 0;
   }
-  return countCount;
+
+  map[wordCount]++;
+
+  return map;
 }
 
 const wordCountMap = monologueLines.reduce(countCounter, {});
