@@ -20,13 +20,13 @@ const monologueLines = [
 function countCounter(countCount, sentence) {
   var wordCount = sentence.split(' ').length;
 
-  if (!map[wordCount]) {
-    map[wordCount] = 0;
+  if (!countCount[wordCount]) {
+    countCount[wordCount] = 0;
   }
 
-  map[wordCount]++;
+  countCount[wordCount]++;
 
-  return map;
+  return countCount;
 }
 
 const wordCountMap = monologueLines.reduce(countCounter, {});
