@@ -31,6 +31,8 @@ function countCounter(countCount, sentence) {
 
 const wordCountMap = monologueLines.reduce(countCounter, {});
 
+console.log(wordCountMap);
+
 const totalBatteries = batteryBatches.reduce((totalBatteries, battery) => {
   return totalBatteries += battery;
 }, 0);
