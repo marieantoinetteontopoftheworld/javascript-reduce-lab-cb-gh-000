@@ -20,3 +20,5 @@ const monologueLines = [
 const totalBatteries = batteryBatches.reduce((battery, 0) => {
   return totalBatteries += battery;
 });
+
+console.log(totalBatteries);
