@@ -17,11 +17,25 @@ const monologueLines = [
   'I am the one who knocks!'
 ];
 
-wordCountMap = {};
+const wordCountMap = {};
+
 wordCounts = monologueLines.map(word => {
   return word.split(' ').length;
 });
-console.log(wordCounts);
+
+function countCounter(countCount, count) {
+  if (wordCountMap.hasOwnProperty(count)) {
+    countCount += 1
+  } else {
+    wordCountMap[countCount] = 1;
+  }
+  return wordCountMap[countCount] = countCount;
+}
+
+wordCounts.reduce(countCounter, 1);
+
+console.log(wordCountMap);
+
 
 const totalBatteries = batteryBatches.reduce((totalBatteries, battery) => {
   return totalBatteries += battery;
