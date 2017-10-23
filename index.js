@@ -18,7 +18,7 @@ const monologueLines = [
 ];
 
 wordCountMap = {};
-console.log(monologueLines[0].split(' ').length);
+console.log(monologueLines.length);
 
 const totalBatteries = batteryBatches.reduce((totalBatteries, battery) => {
   return totalBatteries += battery;
